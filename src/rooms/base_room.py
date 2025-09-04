@@ -28,4 +28,3 @@ class BaseRoom:
 
     def draw(self, surface: pg.Surface) -> None:
         self.all_sprites.draw(surface)
-

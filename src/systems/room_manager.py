@@ -34,4 +34,3 @@ class RoomManager:
     def draw(self, surface: pg.Surface) -> None:
         if self.active_room:
             self.active_room.draw(surface)
-

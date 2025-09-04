@@ -7,7 +7,6 @@ from src.core import config
 from src.rooms.start_room import StartRoom
 from src.systems.room_manager import RoomManager
 
-
 def init_pygame() -> pg.Surface:
     pg.init()
     pg.display.set_caption(config.WINDOW_TITLE)
@@ -43,4 +42,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

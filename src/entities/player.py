@@ -46,4 +46,3 @@ class Player(BaseEntity):
 
         # Clamp to screen bounds for now (until we have collision with walls)
         self.rect.clamp_ip(pg.Rect(0, 0, config.SCREEN_WIDTH, config.SCREEN_HEIGHT))
-

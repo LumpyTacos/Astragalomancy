@@ -23,4 +23,3 @@ class BaseEntity(pg.sprite.Sprite):
 
     def draw(self, surface: pg.Surface) -> None:
         surface.blit(self.image, self.rect)
-

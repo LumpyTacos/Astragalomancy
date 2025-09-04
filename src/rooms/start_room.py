@@ -52,4 +52,3 @@ class StartRoom(BaseRoom):
     def update(self, dt: float) -> None:
         super().update(dt)
         # Future: resolve collisions between player and walls, enemies, pickups
-
