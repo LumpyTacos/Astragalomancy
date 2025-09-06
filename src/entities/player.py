@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Tuple
 import pygame as pg
 
-from src.core import config
+from core import config
 from .base import BaseEntity
 
 

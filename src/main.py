@@ -3,13 +3,14 @@ from __future__ import annotations
 import sys
 import pygame as pg
 
-from src.core import config
-from src.rooms.start_room import StartRoom
-from src.systems.room_manager import RoomManager
+from core import config
+from rooms.start_room import StartRoom
+from systems.room_manager import RoomManager
 
 def init_pygame() -> pg.Surface:
     pg.init()
     pg.display.set_caption(config.WINDOW_TITLE)
+    pg.display.set_icon(pg.image.load("assets/icon.png"))
     screen = pg.display.set_mode((config.SCREEN_WIDTH, config.SCREEN_HEIGHT))
     return screen
 
@@ -17,8 +18,7 @@ def init_pygame() -> pg.Surface:
 def main() -> None:
     screen = init_pygame()
     clock = pg.time.Clock()
-
-    room_manager = RoomManager()
+  
     room_manager.add_room(StartRoom())
 
     running = True

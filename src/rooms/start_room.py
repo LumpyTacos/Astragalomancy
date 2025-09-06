@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import pygame as pg
 
-from src.core import config
-from src.entities.player import Player
+from core import config
+from entities.player import Player
 from .base_room import BaseRoom
 
 

@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Dict
 import pygame as pg
 
-from src.rooms.base_room import BaseRoom
+from rooms.base_room import BaseRoom
 
 
 class RoomManager:

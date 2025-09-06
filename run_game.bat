@@ -1,0 +1,9 @@
+A@echo off
+echo Starting Astragalomancy...
+echo.
+echo Using MSYS2 Python installation...
+C:/msys64/ucrt64/bin/python.exe src/main.py
+echo.
+echo Game ended. Press any key to exit...
+pause >nul
+
