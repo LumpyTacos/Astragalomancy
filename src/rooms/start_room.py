@@ -4,6 +4,9 @@ import pygame as pg
 
 from core import config
 from entities.player import Player
+from entities.weapons.mace_shield import MaceShield
+from entities.weapons.deck_of_hearts import HeartDeck
+from entities.weapons.deck_of_spades import SpadeDeck
 from .base_room import BaseRoom
 
 
@@ -48,6 +51,11 @@ class StartRoom(BaseRoom):
         start_y = height // 2 - config.TILE_SIZE // 2
         self.player = Player((start_x, start_y))
         self.all_sprites.add(self.player)
+
+        # Give player starting weapon
+        starting_weapon = MaceShield()
+        self.player.equip_weapon(starting_weapon)
+        self.all_sprites.add(starting_weapon)
 
     def update(self, dt: float) -> None:
         super().update(dt)

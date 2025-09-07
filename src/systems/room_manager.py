@@ -4,6 +4,8 @@ from typing import Dict
 import pygame as pg
 
 from rooms.base_room import BaseRoom
+from rooms.combat_room import CombatRoom
+from rooms.treasure_room import TreasureRoom
 
 
 class RoomManager:
@@ -34,3 +36,19 @@ class RoomManager:
     def draw(self, surface: pg.Surface) -> None:
         if self.active_room:
             self.active_room.draw(surface)
+
+    def create_dungeon_level(self):
+        """Create a new dungeon level with different room types."""
+        start_room = StartRoom()
+        combat_room = CombatRoom()
+        treasure_room = TreasureRoom()
+
+        # Connect rooms
+        start_room.exits["east"] = combat_room
+        combat_room.exits["west"] = start_room
+        combat_room.exits["north"] = treasure_room
+        treasure_room.exits["south"] = combat_room
+
+        self.add_room(start_room)
+        self.add_room(combat_room)
+        self.add_room(treasure_room)

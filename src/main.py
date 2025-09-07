@@ -10,7 +10,7 @@ from systems.room_manager import RoomManager
 def init_pygame() -> pg.Surface:
     pg.init()
     pg.display.set_caption(config.WINDOW_TITLE)
-    pg.display.set_icon(pg.image.load("assets/icon.png"))
+    #pg.display.set_icon(pg.image.load("assets/icon.png"))
     screen = pg.display.set_mode((config.SCREEN_WIDTH, config.SCREEN_HEIGHT))
     return screen
 
@@ -19,6 +19,8 @@ def main() -> None:
     screen = init_pygame()
     clock = pg.time.Clock()
   
+    # Create a RoomManager instance
+    room_manager = RoomManager()
     room_manager.add_room(StartRoom())
 
     running = True

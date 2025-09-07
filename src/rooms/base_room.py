@@ -14,6 +14,13 @@ class BaseRoom:
         self.name = name
         self.all_sprites = pg.sprite.Group()
         self.walls = pg.sprite.Group()
+        self.exits = {
+            "north": None,
+            "south": None,
+            "east": None,
+            "west": None
+        }
+        self.connected_rooms = {}
 
     def enter(self) -> None:
         """Called when the room becomes active."""
